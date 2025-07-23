@@ -23,6 +23,18 @@ Official JavaScript SDK for CoinPlex API - Build applications on top of the Coin
 
 ### 1. Installation
 
+#### From GitHub Packages (Recommended)
+
+```bash
+# Configure npm to use GitHub Packages for @krystianslowik scope
+npm config set @krystianslowik:registry https://npm.pkg.github.com
+
+# Install the package
+npm install @krystianslowik/coinplex-sdk
+```
+
+#### From npm (Alternative)
+
 ```bash
 npm install coinplex-sdk
 ```
@@ -51,7 +63,7 @@ COINPLEX_CODE=your-authentication-code
 // Load environment variables
 require('dotenv').config();
 
-const CoinPlex = require('coinplex-sdk');
+const CoinPlex = require('@krystianslowik/coinplex-sdk');
 
 async function main() {
   // Initialize client with environment config
