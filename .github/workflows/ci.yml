@@ -61,17 +61,37 @@ jobs:
       run: |
         mkdir -p badge-data
         
+        # Check if individual test results exist
+        wallet_status="${{ steps.test.outputs.wallet_status }}"
+        financial_status="${{ steps.test.outputs.financial_status }}"
+        user_status="${{ steps.test.outputs.user_status }}"
+        income_status="${{ steps.test.outputs.income_status }}"
+        quantify_status="${{ steps.test.outputs.quantify_status }}"
+        ads_status="${{ steps.test.outputs.ads_status }}"
+        
         # Generate badges for each test suite
         for suite in wallet financial user income quantify ads; do
-          status_var="${suite}_status"
-          status=$(echo "${{ steps.test.outputs }}" | grep -o "${status_var}=[^,]*" | cut -d'=' -f2 || echo "failed")
+          # Get status for this suite
+          case $suite in
+            wallet) status="$wallet_status" ;;
+            financial) status="$financial_status" ;;
+            user) status="$user_status" ;;
+            income) status="$income_status" ;;
+            quantify) status="$quantify_status" ;;
+            ads) status="$ads_status" ;;
+          esac
+          
+          # Default to failed if empty
+          if [ -z "$status" ]; then
+            status="failed"
+          fi
           
           if [ "$status" = "passed" ]; then
             color="green"
-            message="✓ passed"
+            message="passing"
           else
             color="red" 
-            message="✗ failed"
+            message="failing"
           fi
           
           echo "{\"schemaVersion\": 1, \"label\": \"$suite\", \"message\": \"$message\", \"color\": \"$color\"}" > "badge-data/$suite.json"
@@ -81,9 +101,7 @@ jobs:
         passed_count=0
         total_count=6
         
-        for suite in wallet financial user income quantify ads; do
-          status_var="${suite}_status"
-          status=$(echo "${{ steps.test.outputs }}" | grep -o "${status_var}=[^,]*" | cut -d'=' -f2 || echo "failed")
+        for status in "$wallet_status" "$financial_status" "$user_status" "$income_status" "$quantify_status" "$ads_status"; do
           if [ "$status" = "passed" ]; then
             passed_count=$((passed_count + 1))
           fi
@@ -91,14 +109,13 @@ jobs:
         
         if [ $passed_count -eq $total_count ]; then
           overall_color="green"
-          overall_message="$passed_count/$total_count passing"
         elif [ $passed_count -gt 0 ]; then
           overall_color="yellow"
-          overall_message="$passed_count/$total_count passing"
         else
           overall_color="red"
-          overall_message="$passed_count/$total_count passing"
         fi
+        
+        overall_message="$passed_count/$total_count passing"
         
         echo "{\"schemaVersion\": 1, \"label\": \"tests\", \"message\": \"$overall_message\", \"color\": \"$overall_color\"}" > badge-data/overall.json
 
