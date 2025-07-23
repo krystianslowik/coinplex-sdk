@@ -81,8 +81,8 @@ Manages user wallet operations, balances, and transaction history.
 **Response Structure**:
 ```json
 {
-  "totalAmount": "100.50",        // Total portfolio value in USDT
-  "totalBalance": "100.50",       // Total balance across all coins
+  "totalAmount": "1000.50",        // Total portfolio value in USDT
+  "totalBalance": "1000.50",       // Total balance across all coins
   "totalFrozen": "0",                   // Total frozen/locked amount
   "totalFlexibleAmount": "0.00002392",  // Available for trading/withdrawal
   "totalPendingAmount": "100.25", // Pending/locked in operations
@@ -93,11 +93,11 @@ Manages user wallet operations, balances, and transaction history.
       "coinName": "USDT",
       "coinIcon": "https://...",
       "coinPrice": "1",
-      "total": "100.50",
-      "balance": "100.50",
+      "total": "1000.50",
+      "balance": "1000.50",
       "frozen": "0",
-      "totalAmount": "100.50",
-      "balanceAmount": "100.50",
+      "totalAmount": "1000.50",
+      "balanceAmount": "1000.50",
       "frozenAmount": "0",
       "hasOpen": true,
       "flexibleAmount": "0.00002392",
@@ -211,7 +211,7 @@ Manages investment products and financial operations.
 {
   "totalAmount": "0",           // Total investment amount
   "todayAmount": "0",          // Today's investment activity  
-  "balance": "100.50",   // Available balance for investment
+  "balance": "1000.50",   // Available balance for investment
   "orderAmount": "0",          // Current order amount
   "canRedeemAmount": "0",      // Amount available for redemption
   "myList": []                 // User's investment products
@@ -258,7 +258,7 @@ Manages investment products and financial operations.
     "hasBuyToLevelLimit": true,
     "hasBuyToTime": true,
     "hasBuy": true,                  // User can purchase
-    "userBalance": "100.50",   // User's available balance
+    "userBalance": "1000.50",   // User's available balance
     "userLevel": 2,                  // User's current level
     "buyAmount": "2000",          // Total purchased by users
     "buyCount": 7296,                // Number of purchases
@@ -319,7 +319,7 @@ Manages user profile, security settings, and account information.
   "unreadCount": 0,                     // Unread notifications
   "level": 2,                           // User level (1-7)
   "levelName": "G1",                    // Level name
-  "totalBalance": "100.50",       // Total portfolio balance
+  "totalBalance": "1000.50",       // Total portfolio balance
   "totalRecharge": "258.198542",        // Total deposits
   "totalWithdraw": "1700",              // Total withdrawals
   "totalIncome": "1649.45898206",       // Total earnings
@@ -529,7 +529,7 @@ The SDK automatically handles:
 
 ### Common Field Types
 
-- **Amount Fields**: String representation of decimal numbers (e.g., "100.50")
+- **Amount Fields**: String representation of decimal numbers (e.g., "1000.50")
 - **Timestamps**: ISO 8601 format or localized strings
 - **IDs**: Integer identifiers
 - **Status Codes**: Integer codes with string descriptions
