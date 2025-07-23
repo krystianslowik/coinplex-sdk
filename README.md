@@ -1,12 +1,12 @@
 # CoinPlex SDK
 
-![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/overall.json)
-![Wallet](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/wallet.json)
-![Financial](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/financial.json)
-![User](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/user.json)
-![Income](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/income.json)
-![Quantify](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/quantify.json)
-![Ads](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/ads.json)
+![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/overall.json&cacheSeconds=300)
+![Wallet](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/wallet.json&cacheSeconds=300)
+![Financial](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/financial.json&cacheSeconds=300)
+![User](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/user.json&cacheSeconds=300)
+![Income](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/income.json&cacheSeconds=300)
+![Quantify](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/quantify.json&cacheSeconds=300)
+![Ads](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/ads.json&cacheSeconds=300)
 
 Official JavaScript SDK for CoinPlex API - Build applications on top of the CoinPlex platform with automatic encryption/decryption, authentication, and comprehensive API coverage.
 
