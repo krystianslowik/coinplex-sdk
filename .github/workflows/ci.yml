@@ -219,6 +219,19 @@ jobs:
             echo "{\"schemaVersion\": 1, \"label\": \"$suite\", \"message\": \"unknown\", \"color\": \"lightgrey\"}" > "badges/$suite.json"
           fi
         done
+        
+        # Generate badge URLs with authentication for private repo
+        echo "Badge URLs (with auth token):" >> badges/README.md
+        echo "Note: Replace TOKEN with a valid GitHub personal access token with repo read permissions" >> badges/README.md
+        echo "" >> badges/README.md
+        
+        for suite in wallet financial user income quantify ads overall; do
+          echo "![${suite}](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/${{ github.repository }}/refs/heads/badges/badges/${suite}.json?token=TOKEN)" >> badges/README.md
+        done
+        
+        # Also create a public version using GitHub Pages approach
+        echo "" >> badges/README.md
+        echo "Alternative: Use GitHub Pages for public badge access" >> badges/README.md
 
     - name: Commit and push badges
       run: |
