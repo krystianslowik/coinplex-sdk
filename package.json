@@ -1,5 +1,5 @@
 {
-  "name": "coinplex-sdk",
+  "name": "@krystianslowik/coinplex-sdk",
   "version": "1.0.0",
   "description": "Official JavaScript SDK for CoinPlex API - Build applications on top of the CoinPlex platform with automatic encryption/decryption, authentication, and comprehensive API coverage.",
   "main": "index.js",
@@ -98,5 +98,8 @@
     "singleQuote": true,
     "tabWidth": 2,
     "trailingComma": "none"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
