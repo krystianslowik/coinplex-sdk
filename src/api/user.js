@@ -50,6 +50,17 @@ class UserAPI {
    */
   async getFinancialSummary() {
     const profile = await this.getProfile();
+    if (!profile) {
+      return {
+        totalBalance: 0,
+        totalRecharge: 0,
+        totalWithdraw: 0,
+        totalIncome: 0,
+        flexibleAmount: 0,
+        pendingAmount: 0,
+        experienceGoldAmount: 0
+      };
+    }
     return {
       totalBalance: parseFloat(profile.totalBalance || '0'),
       totalRecharge: parseFloat(profile.totalRecharge || '0'),
@@ -68,6 +79,16 @@ class UserAPI {
    */
   async getTeamInfo() {
     const profile = await this.getProfile();
+    if (!profile) {
+      return {
+        teamCount: 0,
+        effectiveCount: 0,
+        oneAddTeamCount: 0,
+        twoThreeAddTeamCount: 0,
+        teamActivityGrowthPercent: '0',
+        teamActivityGrowthPercentBoolean: false
+      };
+    }
     return {
       teamCount: profile.teamCount || 0,
       effectiveCount: profile.effectiveCount || 0,
@@ -85,6 +106,17 @@ class UserAPI {
    */
   async getSecuritySettings() {
     const profile = await this.getProfile();
+    if (!profile) {
+      return {
+        hasSetPassword: false,
+        hasBindGoogleAuth: false,
+        hasOpenGoogleAuth: false,
+        identityStatus: -2,
+        mobile: null,
+        mobilePrefix: null,
+        email: null
+      };
+    }
     return {
       hasSetPassword: profile.hasSetPassword || false,
       hasBindGoogleAuth: profile.hasBindGoogleAuth || false,
@@ -103,6 +135,13 @@ class UserAPI {
    */
   async getInviteInfo() {
     const profile = await this.getProfile();
+    if (!profile) {
+      return {
+        inviteCode: null,
+        registerTime: null,
+        teamCount: 0
+      };
+    }
     return {
       inviteCode: profile.inviteCode,
       registerTime: profile.registerTime,
@@ -117,6 +156,14 @@ class UserAPI {
    */
   async getChatInfo() {
     const profile = await this.getProfile();
+    if (!profile) {
+      return {
+        chatCount: 0,
+        useChatCount: 0,
+        hasShowAI: false,
+        remainingChats: 0
+      };
+    }
     return {
       chatCount: profile.chatCount || 0,
       useChatCount: profile.useChatCount || 0,
@@ -133,6 +180,14 @@ class UserAPI {
    */
   async checkLevelRequirements(targetLevel) {
     const profile = await this.getProfile();
+    if (!profile) {
+      return {
+        eligible: false,
+        currentLevel: 0,
+        targetLevel,
+        message: 'Profile not available'
+      };
+    }
     const currentLevel = profile.level || 0;
     
     if (targetLevel <= currentLevel) {
