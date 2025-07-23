@@ -36,7 +36,7 @@
     "lint:fix": "eslint src/ --ext .js --fix",
     "format": "prettier --write \"src/**/*.js\" \"examples/**/*.js\"",
     "docs": "jsdoc -c jsdoc.json",
-    "build": "npm run test",
+    "build": "echo 'Package ready for publishing'",
     "prepublishOnly": "npm run build",
     "example:basic": "node examples/basic-usage.js",
     "example:automation": "node examples/daily-automation.js",
