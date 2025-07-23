@@ -1,5 +1,13 @@
 # CoinPlex SDK
 
+![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/overall.json)
+![Wallet](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/wallet.json)
+![Financial](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/financial.json)
+![User](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/user.json)
+![Income](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/income.json)
+![Quantify](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/quantify.json)
+![Ads](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/ads.json)
+
 Official JavaScript SDK for CoinPlex API - Build applications on top of the CoinPlex platform with automatic encryption/decryption, authentication, and comprehensive API coverage.
 
 ## Features
