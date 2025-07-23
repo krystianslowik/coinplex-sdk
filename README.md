@@ -8,7 +8,7 @@
 ![Quantify](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/quantify.json&cacheSeconds=300)
 ![Ads](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/ads.json&cacheSeconds=300)
 
-Official JavaScript SDK for CoinPlex API - Build applications on top of the CoinPlex platform with automatic encryption/decryption, authentication, and comprehensive API coverage.
+Unofficial JavaScript SDK for CoinPlex API - Build applications on top of the CoinPlex platform with automatic encryption/decryption, authentication, and comprehensive API coverage.
 
 ## Features
 
