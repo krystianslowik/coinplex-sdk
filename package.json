@@ -1,0 +1,101 @@
+{
+  "name": "coinplex-sdk",
+  "version": "1.0.0",
+  "description": "Official JavaScript SDK for CoinPlex API - Build applications on top of the CoinPlex platform with automatic encryption/decryption, authentication, and comprehensive API coverage.",
+  "main": "index.js",
+  "type": "commonjs",
+  "keywords": [
+    "coinplex",
+    "api",
+    "sdk",
+    "cryptocurrency",
+    "trading",
+    "quantify",
+    "automation",
+    "wallet",
+    "financial"
+  ],
+  "author": "krystianslowik",
+  "license": "MIT",
+  "homepage": "https://github.com/krystianslowik/coinplex-sdk#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krystianslowik/coinplex-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krystianslowik/coinplex-sdk/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ examples/ --ext .js",
+    "lint:fix": "eslint src/ examples/ --ext .js --fix",
+    "format": "prettier --write \"src/**/*.js\" \"examples/**/*.js\"",
+    "docs": "jsdoc -c jsdoc.json",
+    "build": "npm run lint && npm run test",
+    "prepublishOnly": "npm run build",
+    "example:basic": "node examples/basic-usage.js",
+    "example:automation": "node examples/daily-automation.js",
+    "example:wallet": "node examples/wallet-monitor.js",
+    "example:income": "node examples/income-tracker.js"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.0",
+    "jsencrypt": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "^29.7.0",
+    "jsdoc": "^4.0.2",
+    "prettier": "^3.2.5"
+  },
+  "files": [
+    "src/",
+    "examples/",
+    "docs/",
+    "index.js",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "env": {
+      "node": true,
+      "jest": true
+    },
+    "rules": {
+      "no-console": "off"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none"
+  }
+}
