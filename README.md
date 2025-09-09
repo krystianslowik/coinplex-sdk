@@ -1,4 +1,4 @@
-# CoinPlex SDK
+# CoinPlex SDK - unfortunately it died :(
 
 ![Tests](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/overall.json&cacheSeconds=300)
 ![Wallet](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/wallet.json&cacheSeconds=300)
@@ -7,6 +7,8 @@
 ![Income](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/income.json&cacheSeconds=300)
 ![Quantify](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/quantify.json&cacheSeconds=300)
 ![Ads](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/krystianslowik/coinplex-sdk/refs/heads/badges/badges/ads.json&cacheSeconds=300)
+
+# THIS REPO IS DEAD. Coinplex scam has died on September 25th – RIP.
 
 Unofficial JavaScript SDK for CoinPlex API - Build applications on top of the CoinPlex platform with automatic encryption/decryption, authentication, and comprehensive API coverage.
 
